@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Assests/Bootstrap.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="./logic.js"></script>
+</head>
+
+<body style="text-align: center;margin: 20%;">
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Verify OTP
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" >
+        <div class="modal-header" style="background-color: aqua; text-align: center;">
+          <h5 class="modal-title" id="exampleModalLabel" >---------------- Phone Verification ---------------</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <p style="color: rgb(155, 151, 151);">Enter the OTP you received on 89206-6XXXX</p>
+        </div>
+        <div class="inputs">
+            <input type="text"  id="first"  onkeyup="keyPressed('first',this,'second')">
+            <input type="text"  id="second" onkeyup="keyPressed('first',this,'third')">
+            <input type="text"  id="third" onkeyup="keyPressed('second',this,'fourth')">
+            <input type="text"  id="fourth" onkeyup="keyPressed('third',this,'fifth')">
+            <input type="text" id="fifth" onkeyup="keyPressed('fourth',this,'sixth')">
+            <input type="text" id="sixth" onkeyup="keyPressed('fifth',this,'sixth')">
+        </div>
+        <div>
+            <a href="index.html">Change Number</a>
+            <a href="index.html" style="margin-left: 5%;">Re-send OTP</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="success()">Verify</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./Assests/jquery.js"></script>
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script> -->
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+  <script src="./Assests/bootstrap.js"></script>
+
+</body>
+</html>
